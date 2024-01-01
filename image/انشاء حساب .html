@@ -1,0 +1,252 @@
+<div class="the-box m-b-10 b-0 b-r-20">
+   
+    <div class="sign_up">
+    <div class="modal-header text-center p-b-0 p-t-0">
+    
+    <a href="/"><img alt="Noor Book" title="Noor Book" class="logo" src="/publice/images/logo.svg"></a>
+    </div>
+    <div class="modal-body ">
+    <p class="text-center m-b-30 slog"><strong class="sign_up_title">إنشاء حساب</strong><br>مكتبة غير محدودة من الكتب العربية</p>
+    <div class="row">
+    <form id="verify_otp" style="display: none;">
+    <div class="col-md-12">
+    <div class="alert-success f-s-14 text-center">تم ارسال رمز التحقق على الهاتف المحمول</div>
+    <div class="form-group">
+    <label class="floating-label" for="email">رمز التحقق في رسالة الهاتف</label>
+    <input type="text" name="otp" class="form-control input-lg" placeholder="رمز التحقق في رسالة الهاتف">
+    </div>
+    </div>
+    <div class="col-md-12">
+    <div class="row">
+    <div class="col-xs-7">
+    <div class="form-group">
+    <label class="floating-label" for="email">رمز التحقق البشري</label>
+    <input type="text" class="form-control input-lg" name="captcha" placeholder="رمز التحقق البشري">
+    </div>
+    </div>
+    <div class="col-xs-5 p-r-0">
+    <div class="form-group ">
+    
+    <img data-toggle="tooltip" data-placement="top" data-original-title="إعادة تحميل" style="padding: 0px;" class="img_code form-control input-lg" src="/verification/validation_captcha?_=5f7ac51026">
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-12 ">
+    <input type="hidden" name="csrf_token" value="0b34e5fd6c7f8815f68b6d296f4c31ed" class="filled">
+    <div class="alert alert-danger" style="display: none;"></div>
+    <button type="button" class="btn btn-default noor-btn-b btn-block submit_verify_otp"><i class="fa fa-unlock"></i> إستعادة كلمة المرور</button>
+    <div class="hr m-b-30 m-t-30"><span>أو</span></div>
+    <p class="text-center">لديك حساب بالفعل؟ <strong><a onclick="event.preventDefault();$('form#register').hide();$('form#reset_email').hide();$('form#verify_otp').hide();$('form#login').show();$('.sign_up_title').text('تسجيل الدخول')" href="#" class="login_click">تسجيل الدخول</a></strong></p>
+    <p class="text-center">ليس لديك حساب؟ <strong><a onclick="event.preventDefault();$('form#login').hide();$('form#reset_email').hide();$('form#verify_otp').hide();$('form#register').show();$('.sign_up_title').text('إنشاء حساب');$('form#register .img_code').attr('src', '/verification/validation_captcha' + '?_=' + uniqueID())" href="#" class="login_click">إنشاء حساب</a></strong></p>
+    </div>
+    </form>
+    <form id="reset_email" style="display: none;">
+    <div class="email_block">
+    <div class="col-md-12">
+    <div class="form-group">
+    <p onclick="$('#reset_email .email_block').hide();$('#reset_email .phone_block').show();$('#reset_email input[name=type]').attr('value', 'phone');" class="show_phone">الهاتف</p>
+    <label class="floating-label" for="email">البريد الإلكتروني</label>
+    <input type="email" name="email" class="form-control input-lg" placeholder="البريد الإلكتروني">
+    </div>
+    </div>
+    </div>
+    <div style="display: none;" class="phone_block">
+    <div class="col-md-12 ">
+    <div class="row">
+    <div class="col-xs-8 ">
+    <div class="form-group">
+    <p onclick="$('#reset_email .phone_block').hide();$('#reset_email .email_block').show();$('#reset_email input[name=type]').attr('value', 'email');" class="show_email">البريد</p>
+    <label class="floating-label" for="email">التليفون المحمول</label>
+    <input type="tel" name="phone" class="form-control input-lg" placeholder="التليفون المحمول">
+    </div>
+    </div>
+    <div class="col-xs-4 p-r-0">
+    <div class="form-group ">
+    
+    <select name="country_id" class="form-control input-lg" dir="ltr">
+    <option value="">الدولة</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-12 ">
+    <div class="row">
+    <div class="col-xs-7">
+    <div class="form-group">
+    <label class="floating-label" for="email">رمز التحقق البشري</label>
+    <input type="text" class="form-control input-lg" name="captcha" placeholder="رمز التحقق البشري">
+    </div>
+    </div>
+    <div class="col-xs-5 p-r-0">
+    <div class="form-group  ">
+    
+    <img data-toggle="tooltip" data-placement="top" data-original-title="إعادة تحميل" style="padding: 0px;" class="img_code form-control input-lg" src="/verification/validation_captcha?_=b2db5f604b">
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-12 ">
+    <input id="type_reset" type="hidden" name="type" value="email" class="filled">
+    <input type="hidden" name="csrf_token" value="0b34e5fd6c7f8815f68b6d296f4c31ed" class="filled">
+    <div class="alert alert-danger" style="display: none;"></div>
+    <button type="button" class="btn btn-default noor-btn-b btn-block submit_reset_email"><i class="fa fa-unlock"></i> إستعادة كلمة المرور</button>
+    <div class="hr m-b-30 m-t-30"><span>أو</span></div>
+    <p class="text-center">لديك حساب بالفعل؟ <strong><a onclick="event.preventDefault();$('form#register').hide();$('form#reset_email').hide();$('form#login').show();$('.sign_up_title').text('تسجيل الدخول')" href="#" class="login_click">تسجيل الدخول</a></strong></p>
+    <p class="text-center">ليس لديك حساب؟ <strong><a onclick="event.preventDefault();$('form#login').hide();$('form#reset_email').hide();$('form#register').show();$('.sign_up_title').text('إنشاء حساب');$('form#register .img_code').attr('src', '/verification/validation_captcha' + '?_=' + uniqueID())" href="#" class="login_click">إنشاء حساب</a></strong></p>
+    </div>
+    </form>
+    <form id="login" style="display:none;">
+    <div class="email_block">
+    <div class="col-md-12">
+    <div class="form-group">
+    <p onclick="$('#login .email_block').hide();$('#login .phone_block').show();$('#login input[name=type]').attr('value', 'phone');" class="show_phone">الهاتف</p>
+    <label class="floating-label" for="email">البريد الإلكتروني</label>
+    <input type="email" name="email" class="form-control input-lg" placeholder="البريد الإلكتروني">
+    </div>
+    </div>
+    </div>
+    <div style="display: none;" class="phone_block">
+    <div class="col-md-12 ">
+    <div class="row">
+    <div class="col-xs-8 ">
+    <div class="form-group">
+    <p onclick="$('#login .phone_block').hide();$('#login .email_block').show();$('#login input[name=type]').attr('value', 'email');" class="show_email">البريد</p>
+    <label class="floating-label" for="email">التليفون المحمول</label>
+    <input type="tel" name="phone" class="form-control input-lg" placeholder="التليفون المحمول">
+    </div>
+    </div>
+    <div class="col-xs-4 p-r-0">
+    <div class="form-group ">
+    
+    <select name="country_id" class="form-control input-lg" dir="ltr">
+    <option value="">الدولة</option>
+    </select>
+    </div>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-12">
+    <div class="form-group">
+    <p class="show_pass">إظهار</p>
+    <label class="floating-label">كلمة المرور</label>
+    <input type="password" name="password" class="form-control input-lg" required="" autocomplete="" placeholder="كلمة المرور">
+    </div>
+    </div>
+    <input type="hidden" name="csrf_token" value="0b34e5fd6c7f8815f68b6d296f4c31ed" class="filled">
+    <input type="hidden" name="type" value="email" class="filled">
+    <div class="col-sm-12">
+    <div class="alert alert-danger m-b-15" style="display: none;"></div>
+    <button type="button" class="btn btn-default noor-btn-b  btn-block submit-login m-b-30"><i class="fa fa-sign-in"></i> تسجيل الدخول</button>
+    <div class="hr m-b-30 m-t-30"><span>أو</span></div>
+    <p class="text-center">ليس لديك حساب؟ <strong><a onclick="event.preventDefault();$('form#login').hide();$('form#reset_email').hide();$('form#register').show();$('.sign_up_title').text('إنشاء حساب');$('form#register .img_code').attr('src', '/verification/validation_captcha' + '?_=' + uniqueID())" href="#" class="login_click">إنشاء حساب</a></strong></p>
+    <p class="text-center">نسيت كلمة المرور؟ <strong>
+    <div class="hr m-b-30 m-t-30"><span>أو</span></div>
+    </div>
+    </form>
+    <form id="register" style="">
+    <div class="col-md-12">
+    <div class="form-group">
+    <label class="floating-label" for="email">الاسم</label>
+    <input type="text" name="name" class="form-control input-lg" required="" placeholder="الاسم">
+    </div>
+    </div>
+    <div class="email_block">
+    <div class="col-md-12">
+    <div class="form-group">
+    <p onclick="$('#register .email_block').hide();$('#register .phone_block').show();$('#register input[name=type]').attr('value', 'phone');" class="show_phone">الهاتف</p>
+    <label class="floating-label" for="email">البريد الإلكتروني</label>
+    <input type="email" name="email" class="form-control input-lg" placeholder="البريد الإلكتروني">
+    </div>
+    </div>
+    </div>
+    <div style="display: none;" class="phone_block">
+    <div class="col-md-12 ">
+    <div class="row">
+    <div class="col-xs-8 ">
+    <div class="form-group">
+    <p onclick="$('#register .phone_block').hide();$('#register .email_block').show();$('#register input[name=type]').attr('value', 'email');" class="show_email">البريد</p>
+    <label class="floating-label" for="email">التليفون المحمول</label>
+    <input type="tel" name="phone" class="form-control input-lg" placeholder="التليفون المحمول">
+    </div>
+    </div>
+    <div class="col-xs-4 p-r-0">
+    <div class="form-group ">
+    
+    <select name="country_id" class="form-control input-lg" dir="ltr">
+    <option value="">الدولة</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-xs-3" style="padding: 0px;">
+    <div class="form-group ">
+    
+    <select name="month_of_birth" class="form-control input-lg" required="">
+    <option value="">شهر الميلاد</option>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">6</option>
+    <option value="7">7</option>
+    <option value="8">8</option>
+    <option value="9">9</option>
+    <option value="10">10</option>
+    <option value="11">11</option>
+    <option value="12">12</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-xs-5">
+    <div class="form-group ">
+    
+    <select name="year_of_birth" class="form-control input-lg" required="">
+    <option value="">سنة الميلاد</option>
+     <option value="2022">2002</option>
+     <option value="2022">2001</option>
+     <option value="2022">2000</option>
+     <option value="2022">1999</option>
+     <option value="2022">1998</option>
+
+    </select>
+    </div>
+    </div>
+    </div>
+    </div>
+    <div class="col-md-12">
+    <div class="form-group ">
+    
+    <select type="text" name="gender" class="form-control input-lg" required="">
+    <option value="">أختر النوع</option>
+    <option value="1">ذكر</option>
+    <option value="2">أنثى</option>
+    </select>
+    </div>
+    </div>
+    <div class="col-md-12">
+    <div class="form-group">
+    <p class="show_pass">إظهار</p>
+    <label class="floating-label">كلمة المرور</label>
+    <input type="password" name="password" class="form-control input-lg" required="" autocomplete="" placeholder="كلمة المرور">
+    </div>
+    </div>
+    </div>
+    <input type="hidden" name="csrf_token" value="0b34e5fd6c7f8815f68b6d296f4c31ed" class="filled">
+    <input type="hidden" name="type" value="email" class="filled">
+    <div class="col-sm-12">
+    <div class="alert alert-danger m-b-15" style="display: none;"></div>
+    <button type="button" class="btn btn-default noor-btn-b  btn-block submit-register m-b-30"><i class="fa fa-user"></i> إنشاء حساب</button>
+    <div class="hr m-b-30 m-t-30"><span>أو</span></div>
+    <p class="text-center">لديك حساب بالفعل؟ <strong><a onclick="event.preventDefault();$('form#register').hide();$('form#reset_email').hide();$('form#login').show();$('.sign_up_title').text('تسجيل الدخول')" href="#" class="login_click">تسجيل الدخول</a></strong></p>
+    <p class="text-center">نسيت كلمة المرور؟ <strong><a onclick="event.preventDefault();$('form#login').hide();$('form#register').hide();$('form#reset_email').show();$('.sign_up_title').text('إستعادة كلمة المرور');$('form#reset_email .img_code').attr('src', '/verification/validation_captcha' + '?_=' + uniqueID())" href="#" class="login_click">إستعادة كلمة المرور</a></strong></p>
+    </div>
+    </form>
+    </div>
+    </div>
+    </div>
+   
+    </div>

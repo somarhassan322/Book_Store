@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> sing up</title>
+    <link rel ="stylesheet" href="signup.css">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+   
+ </head>
+ <body>
+    <div class="container">
+        <form id="form" action="/">
+            <h1>sing up</h1>
+            <div class="input-control">
+                <label for="username">username</label>
+                <input id="username" name="username" type="text" >
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="email">email</label>
+                <input id="email" name="username" type="text">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">password</label>
+                <input id="password" name="password" type="password">
+                <div class="error"></div>
+            </div>
+            <div class="input-control">
+                <label for="password">password again</label>
+                <input id="password2" name="password2" type="password">
+                <div class="error"></div>
+            </div>
+           
+            <div class="checkbox">
+                <input type="checkbox"  name="" id="remember-me">
+                <label for="remember-me">remember-me</label>
+              </div>
+              <button type="submit" onclick="signup()">sign up</button>
+              <p>forget password ? <a href="#">click hrer</a> </p>
+              <p> have an account <a href="logo.html">login</a> </p>
+      
+
+        </form>
+    
+    </div>
+    <script  src="signup.js"> </script>
+ </body>
+ 
+</html>

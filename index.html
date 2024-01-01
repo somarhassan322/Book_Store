@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المكتبة الألكترونية  </title>
+    <link rel ="stylesheet" href="index.css">
+    <script src="https://kit.fontawesome.com/92d70a2fd8.js" crossorigin="anonymous"></script>
+ </head>
+ <body>
+  <form action="process.php" method="POST">
+    <input type="text" name="name" placeholder="Enter your name" required>
+    <input type="email" name="email" placeholder="Enter your email" required>
+    <button type="submit">Submit</button>
+   </form>
+
+
+      <div class="header">
+        <div class="navbar">
+          <p> Books5 </p>
+          <ul>
+            <li><a href="#d1">الرئيسية</a></li>
+            <li><a href="#d2">أقسام الكتب </a></li>
+              <li><a href="#d3">حول</a></li>
+              <li><a href="#d4">اتصل بنا</a></li>
+  
+          </ul>
+        </div>
+        <div class="navbar-b">
+          <div class="dropdown">
+            <select name=""> 
+              <option value="1">categorise</option>
+              <option value="2">new</option>
+              <option value="3">Imported</option>
+              <option value="4">local</option>
+            </select>         
+          </div>
+          <div class="search">
+            <input type="text" class="searchInput" placeholder="search book name " id="myinput">
+          </div>
+          <div class="user">
+            <ul>
+              <li> <a  href="signup.html">انشاء حساب</a></li>
+              <li><a  href="logo.html">تسجيل الدخول</a></li> 
+            </ul>
+          </div> 
+        </div> 
+          
+        </div>     
+      </div>
+    
+      <div class="body1" id="d1">
+        <div class="shop-container">
+          <div class ="product-box">
+
+            <a href="book1.html"><img src="image/aa-1.jpg"  id="1" alt="" class="product-img"></a>
+            <h2 class="product-title"> لكنوود </h2>
+
+
+          </div>
+          <div class ="product-box">
+
+            <a href="book2.html"> <img src="image/bb-1.jpg" id="2" alt="" class="product-img"></a>
+            <h2 class="product-title"></h2>
+   
+          </div>
+          <div class ="product-box">
+
+            <a href="book3.html"> <img src="image/cc-1.jpg"  id="3" alt="" class="product-img"></a>
+            <h2 class="product-title"></h2>
+ 
+          </div>
+          <div class ="product-box">
+
+            <a href="book4.html"> <img src="image/dd-1.jpg" id="4" alt="" class="product-img"></a>
+            <h2 class="product-title"></h2>
+          
+         
+          </div>
+          <div class ="product-box">
+
+            <a href="book5.html"> <img src="image/ee-1.jpg"  id="5" alt="" class="product-img"></a>
+            <h2 class="product-title"></h2>
+ 
+          </div>
+          <div class ="product-box">
+
+            <a href="book6.html"> <img src="image/ff-1.jpg" id="6" alt="" class="product-img"></a>
+            <h2 class="product-title"></h2>
+          
+         
+          </div>
+      
+        </div>
+      </div> 
+
+ </body>
+ <script  src="signup.js"> </script>
+</html>
